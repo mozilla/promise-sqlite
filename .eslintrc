@@ -1,0 +1,66 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+
+  "parser": "babel-eslint",
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+    }
+  },
+
+  "plugins": [
+    "import",
+  ],
+
+  "settings": {
+    "import/extensions": [
+      ".js",
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+        ]
+      }
+    }
+  },
+
+  "rules": {
+    "new-cap": ["error", {
+      "capIsNewExceptions": [
+        "Router",
+        "Immutable.List",
+        "Immutable.Map",
+        "Immutable.Record",
+        "Immutable.Set"
+      ]
+    }],
+    "arrow-body-style": ["off"],
+    "func-names": ["off"],
+    "space-before-function-paren": ["error", "never"],
+    "no-console": ["error"],
+    "no-confusing-arrow": ["off"],
+    "no-param-reassign": ["off"],
+    "no-return-assign": ["off"],
+    "no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }],
+    "no-underscore-dangle": ["off"],
+    "no-use-before-define": ["off"],
+    "dot-notation": ["off"],
+    "eqeqeq": ["error", "allow-null"],
+    "import/no-unresolved": ["error", {
+      "commonjs": true
+    }],
+    "import/no-commonjs": ["error"],
+    "import/no-amd": ["error"],
+    "import/imports-first": ["error"],
+    "import/no-named-as-default": ["off"]
+  }
+}

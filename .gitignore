@@ -1,0 +1,13 @@
+/.idea/
+npm-debug.log
+node_modules
+dist
+*.sw*
+/lib
+build-config.json
+.DS_Store
+.nyc_output/
+*~
+.cache
+.vscode
+*.log

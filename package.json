@@ -1,0 +1,44 @@
+{
+  "name": "promise-sqlite",
+  "version": "1.0.0",
+  "description": "A simple promise wrapper for sqlite3.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "add-module-exports",
+      "transform-class-properties"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/promise-sqlite.git"
+  },
+  "dependencies": {
+    "sqlite3": "mossop/node-sqlite3#v3.1.4.1",
+    "thenify-all": "1.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.10.4",
+    "babel-eslint": "6.1.0",
+    "cross-env": "1.0.8",
+    "eslint": "3.0.0",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-plugin-import": "1.10.2",
+    "nyc": "6.6.1"
+  },
+  "engines": {
+    "node": ">=6.1.0"
+  },
+  "author": "Mozilla Corporation",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/promise-sqlite/issues"
+  },
+  "homepage": "https://github.com/mozilla/promise-sqlite#readme"
+}

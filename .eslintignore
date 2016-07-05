@@ -1,0 +1,4 @@
+lib/**
+pkg/**
+dist/**
+node_modules/**
