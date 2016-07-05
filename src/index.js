@@ -172,7 +172,7 @@ export class DB {
    *               Defaults to a placeholder that logs nothing.
    * @returns Promise that resolves to the opened database.
    */
-  static open(filename, mode = OPEN_CREATE | OPEN_READWRITE, logger = defaultLogger) {
+  static open(filename, { mode = OPEN_CREATE | OPEN_READWRITE, logger = defaultLogger } = {}) {
     return new Promise((resolve, reject) => {
       const sq = new sqlite3.Database(filename, mode, (err) => {
         if (err) {
