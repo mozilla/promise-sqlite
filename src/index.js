@@ -112,14 +112,15 @@ export class DB {
   }
 
   run(sql, params) {
+    const logger = this.logger;
     return new Promise((resolve, reject) => {
       this.db.run(sql, params, function(err) {
         if (debug) {
-          this.logger.info(`Running: ${sql}, ${JSON.stringify(params)}`);
+          logger.info(`Running: ${sql}, ${JSON.stringify(params)}`);
         }
 
         if (err) {
-          this.logger.info(`SQL error: ${err} in ${sql}.`);
+          logger.info(`SQL error: ${err} in ${sql}.`);
           reject(err);
         } else {
           resolve({ lastID: this.lastID, changes: this.changes });
